@@ -22,7 +22,7 @@
     <string name="list_item_cart_qty">QTY</string>
     <string name="checkout">สั่ง</string>
     <string name="shopping_cart">ตะกร้า</string>
-    <string name="clear">Clear</string>
+    <string name="clear"></string>
     <string name="no_result_finded">No products found in this category</string>
     <string name="no_cart_items">Please add at least one item to your cart</string>
     <string name="total">TOTAL:</string>
