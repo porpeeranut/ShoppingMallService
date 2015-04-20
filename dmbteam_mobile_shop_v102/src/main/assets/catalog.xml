@@ -3,6 +3,9 @@
 
     <categories>
         <!-- start Notebooks Category -->
+        <category id="50">
+            <title>หน้าหลัก</title>
+        </category>
         <category id="100">
             <title>ร้าน</title>
 		</category>

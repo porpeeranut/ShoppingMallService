@@ -543,7 +543,11 @@ public class MainActivity extends ActionBarActivity implements
 				for (int i = 0; i < mMainAdapterData.size(); i++) {
 					if (mMainAdapterData.get(i).getId() == category.getId()) {
                         //Toast.makeText(getApplicationContext(), ""+category.getId(), Toast.LENGTH_SHORT).show();
+                        List<Category> subCategories;
                         switch (category.getId()) {
+                            case 50:
+                                setUpAdapter();
+                                break;
                             case 300:
                                 showFragment(false, true, new BaiSed());
                                 break;
@@ -559,7 +563,7 @@ public class MainActivity extends ActionBarActivity implements
                                 finish();
                                 break;
                             default:
-                                List<Category> subCategories = catalogXmlParser
+                                subCategories = catalogXmlParser
                                         .getSubCategories(category, padding);
 
                                 // 3 dimension hieararchy
