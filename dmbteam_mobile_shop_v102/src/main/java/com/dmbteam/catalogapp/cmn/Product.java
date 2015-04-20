@@ -53,9 +53,28 @@ public class Product implements Comparable<Product> {
 	/** The discounted price. */
 	private double discountedPrice;
 
-	/* (non-Javadoc)
-	 * @see java.lang.Comparable#compareTo(java.lang.Object)
-	 */
+    public Product(){}
+
+    public Product(int id, int category, double price, String date, String title, String photo) {
+        this.id = id;
+        this.category = category;
+        this.price = price;
+        this.date = date;
+        this.title = title;
+        this.photo = photo;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    /* (non-Javadoc)
+         * @see java.lang.Comparable#compareTo(java.lang.Object)
+         */
 	@Override
 	public int compareTo(Product anotherProduct) {
 		return Integer.valueOf(id).compareTo(anotherProduct.id);

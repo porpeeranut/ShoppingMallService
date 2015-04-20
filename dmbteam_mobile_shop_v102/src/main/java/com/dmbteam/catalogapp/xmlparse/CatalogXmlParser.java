@@ -247,8 +247,26 @@ public class CatalogXmlParser {
         categories.add(cate);
         //--------------------------------------------------------
 
-        mCatalog.setCategories(categories);
+        List<Product> products = new ArrayList<Product>();
+        Product prod;
+        //  int id, int category, double price, String date, String title, String photo, String description
+        prod = new Product(1, 101, 1000, "30.10.2014", "Nexus 9", "home_nexus9");
+        prod.setDescription("8.9 IPS LCD, Android 5.0, NVIDIA Tegra K1 processor 2.3 GHz, 32 Gb");
+        prod.setDiscount(20);
+        products.add(prod);
 
+        prod = new Product(6, 201, 999, "01.10.2014", "LG G3", "lg_g3");
+        prod.setDescription("5.5 Inches, 1440x2560 pixels, 13 MP Camera, 16 GB Storage");
+        prod.setDiscount(10);
+        products.add(prod);
+
+        prod = new Product(7, 101, 1499, "02.10.2014", "Acer S7 13.3", "acer_s7");
+        prod.setDescription("The premium Ultrabook from Acer");
+        prod.setDiscount(10);
+        products.add(prod);
+
+        mCatalog.setCategories(categories);
+        mCatalog.setProducts(products);
         mCatalog.initCategoriesForAdapter();
     }
 
