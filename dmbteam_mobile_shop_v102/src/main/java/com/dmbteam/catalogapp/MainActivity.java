@@ -134,6 +134,7 @@ public class MainActivity extends ActionBarActivity implements
 		catalogXmlParser = CatalogXmlParser.getInstance();
 
 		catalogXmlParser.parseData(this);
+        initMainComponents();
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -144,10 +145,10 @@ public class MainActivity extends ActionBarActivity implements
 	 * Inits the main components.
 	 */
 	public void initMainComponents() {
+        catalogXmlParser.set_New_Data();
+
 		initLeftSlidingMenu();
-
 		setUpAdapter();
-
 	}
 
 	/*

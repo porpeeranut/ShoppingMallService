@@ -80,9 +80,9 @@ public class CatalogXmlParser {
 				mCatalog.makeCategoriesHierarchy(new ArrayList<Category>(
 						mCatalog.getAllCategories()));
 
-				mCatalog.initCategoriesForAdapter();
+				//mCatalog.initCategoriesForAdapter();
 
-				((MainActivity) c).initMainComponents();
+				//((MainActivity) c).initMainComponents();
 			}
 		} catch (Exception e) {
 			Log.e(LOG, "Error while parsing xml data" + e.getMessage());
@@ -187,6 +187,71 @@ public class CatalogXmlParser {
 
 		return resultList;
 	}
+
+
+
+    public void set_New_Data() {
+        List<Category> categories = new ArrayList<Category>();
+        Category cate;
+        cate = new Category(50, true, 0, "หน้าหลัก");
+        categories.add(cate);
+        //--------------------------------------------------------
+        cate = new Category(100, true, 0, "ร้าน");
+        cate.addSubCategoryId(101);
+        cate.addSubCategoryId(102);
+        cate.addSubCategoryId(103);
+        cate.addSubCategoryId(104);
+        categories.add(cate);
+
+        cate = new Category(101, false, 100, "ร้าน1");
+        categories.add(cate);
+
+        cate = new Category(102, false, 100, "ร้าน2");
+        categories.add(cate);
+
+        cate = new Category(103, false, 100, "ร้าน3");
+        categories.add(cate);
+
+        cate = new Category(104, false, 100, "ร้าน4");
+        categories.add(cate);
+        //--------------------------------------------------------
+        cate = new Category(200, true, 0, "ประเภท");
+        cate.addSubCategoryId(201);
+        cate.addSubCategoryId(202);
+        cate.addSubCategoryId(203);
+        cate.addSubCategoryId(204);
+        categories.add(cate);
+
+        cate = new Category(201, false, 200, "อาหาร");
+        categories.add(cate);
+
+        cate = new Category(202, false, 200, "เครื่องดื่ม");
+        categories.add(cate);
+
+        cate = new Category(203, false, 200, "เครื่องครัว");
+        categories.add(cate);
+
+        cate = new Category(204, false, 200, "อื่นๆ");
+        categories.add(cate);
+        //--------------------------------------------------------
+        cate = new Category(300, true, 0, "ใบเสร็จ");
+        categories.add(cate);
+
+        cate = new Category(400, true, 0, "เติมเงิน");
+        categories.add(cate);
+
+        cate = new Category(500, true, 0, "Setting");
+        categories.add(cate);
+
+        cate = new Category(600, true, 0, "ออกจากระบบ");
+        categories.add(cate);
+        //--------------------------------------------------------
+
+        mCatalog.setCategories(categories);
+
+        mCatalog.initCategoriesForAdapter();
+    }
+
 
 	/**
 	 * The Class CatalogXmlNetworkStremReader.

@@ -19,6 +19,14 @@ public class Category implements Comparable<Category> {
 		this.subCategoriesIds = new ArrayList<Integer>();
 	}
 
+    public Category(int id, boolean isMain, int parentId, String title) {
+        this.subCategoriesIds = new ArrayList<Integer>();
+        this.id = id;
+        this.mIsMain = isMain;
+        this.parentId = parentId;
+        this.title = title;
+    }
+
 	/** The sub categories ids. */
 	private List<Integer> subCategoriesIds;
 	

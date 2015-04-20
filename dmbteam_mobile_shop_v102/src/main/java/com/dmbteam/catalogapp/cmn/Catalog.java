@@ -80,6 +80,20 @@ public class Catalog {
 		}
 	}
 
+
+    public void setCategories(List<Category> cats) {
+        categories = cats;
+        mPredefinesCategories = (ArrayList<Category>) cats;
+    }
+
+    public void setProducts(List<Product> prodct) {
+        products = prodct;
+    }
+
+    public void setSliders(List<Product> sli) {
+        slider = sli;
+    }
+
 	// All categories sorted by id
 	/**
 	 * Gets the all categories.
