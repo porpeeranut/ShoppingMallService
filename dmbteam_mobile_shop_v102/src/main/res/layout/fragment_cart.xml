@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg" >
+
+    <RelativeLayout
+        android:id="@+id/fra_cart_info_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/fra_cart_tv_saved_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/fra_cart_saved"
+            android:textColor="@color/orange"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_subtotal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/fra_cart_tv_saved_label"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/fra_cart_subtotal"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_vat_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/fra_cart_tv_subtotal_label"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/fra_cart_vat"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_total_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/fra_cart_tv_vat_label"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/fra_cart_total"
+            android:textColor="?attr/first_active_color"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_saved_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/fra_cart_saved"
+            android:textColor="@color/orange"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_subtotal_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/fra_cart_tv_saved_value"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/fra_cart_subtotal"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_vat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/fra_cart_tv_subtotal_value"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/fra_cart_vat"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/fra_cart_tv_total_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/fra_cart_tv_vat_value"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="?attr/first_active_color"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/fra_cart_total"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <com.dmbteam.catalogapp.util.ImprovedRecyclerView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fra_cart_info_container"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:choiceMode="none"
+        android:clickable="false"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="vertical"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

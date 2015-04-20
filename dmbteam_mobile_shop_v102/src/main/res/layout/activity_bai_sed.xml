@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true">
+
+        <FrameLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/frameLayout"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|top"
+                android:background="#ffd9d9d9">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="รหัสบิล :"
+                    android:id="@+id/textView"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/textView2"
+                    android:layout_gravity="left|top"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="วันที่ออกบิล :"
+                    android:id="@+id/textView4"
+                    android:layout_gravity="left|top"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="7dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/textView5"
+                    android:layout_alignTop="@+id/textView4"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:layout_toEndOf="@+id/textView4"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/textView6"
+                    android:layout_below="@+id/textView4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="โค้ก 450 ml"
+                    android:id="@+id/textView7"
+                    android:layout_below="@+id/textView4"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:layout_toEndOf="@+id/textView6"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="450B"
+                    android:id="@+id/textView8"
+                    android:layout_below="@+id/textView5"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="31dp"
+                    android:layout_marginEnd="31dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="รวม"
+                    android:id="@+id/textView9"
+                    android:layout_marginTop="45dp"
+                    android:layout_below="@+id/textView7"
+                    android:layout_toLeftOf="@+id/button2"
+                    android:layout_toStartOf="@+id/button2"
+                    android:layout_marginRight="41dp"
+                    android:layout_marginEnd="41dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="450B"
+                    android:id="@+id/textView10"
+                    android:layout_alignTop="@+id/textView9"
+                    android:layout_alignLeft="@+id/textView8"
+                    android:layout_alignStart="@+id/textView8" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:text="ยืนยันรับสินค้า"
+                    android:id="@+id/button2"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/textView10"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="#ff72b83a"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ยังไม่ได้รับ"
+                    android:id="@+id/textView11"
+                    android:textStyle="bold"
+                    android:layout_alignTop="@+id/textView2"
+                    android:layout_alignRight="@+id/button2"
+                    android:layout_alignEnd="@+id/button2"
+                    android:textColor="#ffff0000" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_bg"
+        android:id="@+id/view" />
+
+</RelativeLayout>

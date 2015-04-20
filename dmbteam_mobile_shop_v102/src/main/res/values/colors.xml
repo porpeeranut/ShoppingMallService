@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Green Theme Colors -->
+    <color name="theme_green_main_color">#699f39</color>
+    <color name="theme_green_main_color_darker">#3e6023</color>
+    
+    <!-- Blue Theme Colors -->
+    <color name="theme_blue_main_color">#3498db</color>
+    <color name="theme_blue_main_color_darker">#2980b9</color>
+    
+    <!-- Orange Theme Colors -->
+    <color name="theme_orange_main_color">#e67e22</color>
+    <color name="theme_orange_main_color_darker">#d35400</color>
+    
+    <!-- Purple Theme Colors -->
+    <color name="theme_purple_main_color">#9b59b6</color>
+    <color name="theme_purple_main_color_darker">#8e44ad</color>
+    
+    <!-- DarkBlue Theme Colors -->
+    <color name="theme_darkblue_main_color">#34495e</color>
+    <color name="theme_darkblue_main_color_darker">#2c3e50</color>
+    
+    <!-- Neutral Theme Colors -->
+    <color name="theme_neutral_main_color">#95a5a6</color>
+    <color name="theme_neutral_main_color_darker">#7f8c8d</color>
+    
+    <!-- Pink Theme Colors -->
+    <color name="theme_pink_main_color">#d2527f</color>
+    <color name="theme_pink_main_color_darker">#b8486f</color>
+    
+    <color name="sliding_sub_cat_bg">#f5f5f5</color>
+    <color name="sliding_delimiter">#d1d1d1</color>
+    <color name="main_bg">#eeeeee</color>
+    <color name="text_color_gray">#bbbbbb</color>
+    
+    
+    <color name="selected_product_dark_text">#363636</color>
+    <color name="selected_product_less_dark_text">#b0b0b0</color>
+    <color name="selected_product_separator_bg">#eeeeee</color>
+    
+    <color name="orange">#ff8800</color>
+    
+    <color name="black_75_transparency">#C0000000</color>
+    
+</resources>

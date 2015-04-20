@@ -1,0 +1,127 @@
+<resources>
+
+    <style name="ThemeGreen" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_green_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_green_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_green_main_color</item>
+        <item name="first_active_color_darker">@color/theme_green_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_green</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart</item>
+        <item name="oval_single_price">@drawable/bg_single_price</item>
+    </style>
+
+    <style name="ThemeBlue" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_blue_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_blue_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_blue_main_color</item>
+        <item name="first_active_color_darker">@color/theme_blue_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_blue</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector_blue</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart_blue</item>
+        <item name="oval_single_price">@drawable/bg_single_price_blue</item>
+    </style>
+
+    <style name="ThemeOrange" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_orange_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_orange_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_orange_main_color</item>
+        <item name="first_active_color_darker">@color/theme_orange_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_orange</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector_orange</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart_orange</item>
+        <item name="oval_single_price">@drawable/bg_single_price_orange</item>
+    </style>
+
+    <style name="ThemePurple" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_purple_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_purple_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_purple_main_color</item>
+        <item name="first_active_color_darker">@color/theme_purple_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_purple</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector_purple</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart_purple</item>
+        <item name="oval_single_price">@drawable/bg_single_price_purple</item>
+    </style>
+
+    <style name="ThemeDarkBlue" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_darkblue_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_darkblue_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_darkblue_main_color</item>
+        <item name="first_active_color_darker">@color/theme_darkblue_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_darkblue</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector_darkblue</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart_darkblue</item>
+        <item name="oval_single_price">@drawable/bg_single_price_darkblue</item>
+    </style>
+
+    <style name="ThemeNeutral" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_neutral_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_neutral_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_neutral_main_color</item>
+        <item name="first_active_color_darker">@color/theme_neutral_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_neutral</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector_neutral</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart_neutral</item>
+        <item name="oval_single_price">@drawable/bg_single_price_neutral</item>
+    </style>
+
+    <style name="ThemePink" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/theme_pink_main_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_pink_main_color_darker</item>
+
+        <!-- Theme specific colours -->
+        <item name="first_active_color">@color/theme_pink_main_color</item>
+        <item name="first_active_color_darker">@color/theme_pink_main_color_darker</item>
+        <item name="ab_search_et">@drawable/ab_search_et_bg_pink</item>
+
+        <!-- Theme specific icons -->
+        <item name="pager_indicator_icon">@drawable/pager_icon_selector_pink</item>
+        <item name="add_to_cart_icon">@drawable/btn_single_add_to_cart_pink</item>
+        <item name="oval_single_price">@drawable/bg_single_price_pink</item>
+    </style>
+
+    <style name="ThemeNoColor" parent="Theme.AppCompat.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+</resources>

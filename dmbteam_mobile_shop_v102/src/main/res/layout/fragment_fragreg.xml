@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.dmbteam.catalogapp.fragreg">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/main_placeholder_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="อยากสมัครเป็น : "
+                android:id="@+id/textView3"
+                android:layout_marginLeft="30dp"
+                android:textColor="#ff000000" />
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="50dp"
+                android:text="ร้านค้า"
+                android:layout_below="@+id/jdtchoose"
+                android:layout_alignLeft="@+id/jdtchoose" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ผู้ใช้ทั่วไป"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="0dp"
+                android:layout_below="@+id/radioButton1"
+                android:layout_alignLeft="@+id/radioButton1"
+                />
+
+
+            </RadioGroup>
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText6"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="19dp"
+            android:hint="Name"/>
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_marginLeft="19dp"
+            android:hint="E-mail" />
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editText5"
+            android:layout_marginLeft="19dp"
+            android:hint="Phone Number" />
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:inputType="textVisiblePassword|textNoSuggestions"
+            android:hint="Username"
+            android:id="@+id/editText" />
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="Password"
+            android:id="@+id/editText2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</FrameLayout>

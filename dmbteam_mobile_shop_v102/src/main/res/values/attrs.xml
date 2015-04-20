@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="header">
+        <!-- First active color of the app. In our case this is green -->
+        <attr name="first_active_color" format="reference" />
+        <attr name="first_active_color_darker" format="reference" />
+        <attr name="ab_search_et" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="RippleView">
+        <attr name="rippleColor" format="color" />
+        <attr name="alphaFactor" format="float" />
+        <attr name="hover" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="PagerIndicatorIcon">
+
+        <attr name="pager_indicator_icon" format="reference"/>
+        <attr name="add_to_cart_icon" format="reference"/>
+        <attr name="oval_single_price" format="reference"/>
+    </declare-styleable>
+        
+</resources>

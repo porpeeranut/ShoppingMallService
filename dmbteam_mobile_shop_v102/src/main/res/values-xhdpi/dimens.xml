@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="main_screen_prices">17sp</dimen>
+    <dimen name="main_screen_prices_3items">12sp</dimen>
+    <dimen name="main_screen_discount_3items">14sp</dimen>
+    
+</resources>

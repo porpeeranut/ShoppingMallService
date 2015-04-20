@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shopping Mall Service</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_close">Drawer Closed</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="discount"><strike>600 $</strike></string>
+    <string name="discount_1"><strike>900 $</strike></string>
+    <string name="discount_format">%s OFF</string>
+    <string name="atleast_five_items">You need to have at least five items.</string>
+    <string name="selected_page_number" formatted="false">%s of %s</string>
+    <string name="existing_product_in_cart">This product already exist in your cart.</string>
+    <string name="metadata_phone">Phone: %s</string>
+    <string name="metadata_skype">Skype: %s</string>
+    <string name="metadata_facebook">Facebook: %s</string>
+    <string name="fra_cart_saved">Saved:</string>
+    <string name="fra_cart_subtotal">Subtotal:</string>
+    <string name="fra_cart_vat">VAT(%s%%):</string>
+    <string name="fra_cart_total">TOTAL:</string>
+    <string name="list_item_cart_qty">QTY</string>
+    <string name="checkout">สั่ง</string>
+    <string name="shopping_cart">ตะกร้า</string>
+    <string name="clear">Clear</string>
+    <string name="no_result_finded">No products found in this category</string>
+    <string name="no_cart_items">Please add at least one item to your cart</string>
+    <string name="total">TOTAL:</string>
+    <string name="fill_info">Google Maps :</string>
+    <string name="full_name">Full Name</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone">Phone</string>
+    <string name="comment">Comment</string>
+    <string name="sent">ยืนยัน</string>
+    <string name="mandatory_fields">Please fill all mandatory fields</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="transition_cover">My Transition</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_splash">splash</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bai_sed">BaiSed</string>
+    <string name="title_activity_topup">topup</string>
+    <string name="title_activity_setting">Setting</string>
+
+</resources>

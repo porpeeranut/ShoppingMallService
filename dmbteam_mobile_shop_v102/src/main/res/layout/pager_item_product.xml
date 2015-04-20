@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.melnykov.fab.ObservableScrollView
+        android:id="@+id/pager_item_ObservableScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <RelativeLayout
+                android:id="@+id/pager_item_product_main_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" >
+
+                <ImageView
+                    android:id="@+id/pager_item_product_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:transitionName="@string/transition_cover" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/black_75_transparency"
+                    android:drawableLeft="@drawable/ic_single_category"
+                    android:padding="5dp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_page_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/black_75_transparency"
+                    android:padding="5dp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/orange"
+                    android:padding="5dp"
+                    android:text="20% OFF"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pager_item_product_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pager_item_product_main_rl"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/pager_item_product_oval_discount_rl"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/pager_item_product_delimiter1"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/pager_item_product_title"
+                android:background="@color/selected_product_separator_bg" />
+
+            <RelativeLayout
+                android:id="@+id/pager_item_product_oval_discount_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pager_item_product_main_rl"
+                android:layout_marginTop="-60dp" >
+
+                <ImageView
+                    android:id="@+id/pager_item_product_oval_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="?attr/oval_single_price" />
+
+                <View
+                    android:id="@+id/pager_item_product_oval_dump_view"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="45dp" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_oval_price_no_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="45dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_oval_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pager_item_product_oval_dump_view"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_oval_price_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/pager_item_product_oval_price"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/pager_item_product_condition"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pager_item_product_delimiter1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Condition:"
+                    android:textColor="@color/selected_product_less_dark_text"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_condition_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:textColor="@color/selected_product_dark_text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pager_item_product_color"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pager_item_product_condition"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color:"
+                    android:textColor="@color/selected_product_less_dark_text"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pager_item_product_color_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="57dp"
+                    android:textColor="@color/selected_product_dark_text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/pager_item_product_delimiter2"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/pager_item_product_color"
+                android:layout_marginTop="15dp"
+                android:background="@color/selected_product_separator_bg" />
+
+            <TextView
+                android:id="@+id/pager_item_product_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pager_item_product_delimiter2"
+                android:layout_margin="15dp"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </com.melnykov.fab.ObservableScrollView>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="?attr/add_to_cart_icon"
+        fab:fab_colorNormal="@android:color/transparent"
+        fab:fab_colorPressed="?attr/first_active_color"
+        fab:fab_colorRipple="?attr/first_active_color"
+        fab:fab_shadow="false" />
+
+</FrameLayout>

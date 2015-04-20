@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/list_item_filter_product_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <TextView
+            android:id="@+id/list_item_filter_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/list_item_filter_qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/list_item_filter_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="end"
+            android:textColor="@color/selected_product_dark_text"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/selected_product_separator_bg" />
+
+    <LinearLayout
+        android:id="@+id/list_item_filter_cart_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/list_item_filter_cart_delimiter"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/selected_product_separator_bg" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/list_item_filter_total_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/total"
+                android:textColor="@color/selected_product_dark_text"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/list_item_filter_total_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="end"
+                android:textColor="@color/selected_product_dark_text"
+                android:textSize="24sp" />
+        </LinearLayout>
+        
+		<View
+            android:id="@+id/list_item_filter_cart_delimiter2"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="@color/selected_product_separator_bg" />
+		
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/fill_info"
+            android:textSize="16sp"
+            android:id="@+id/cvvvv" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
