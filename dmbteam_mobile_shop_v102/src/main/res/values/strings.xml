@@ -9,12 +9,12 @@
     <string name="discount"><strike>600 $</strike></string>
     <string name="discount_1"><strike>900 $</strike></string>
     <string name="discount_format">%s OFF</string>
-    <string name="atleast_five_items">You need to have at least five items.</string>
+    <string name="atleast_five_items">คุณต้องซื้อของมากกว่า 5 ชิ้น.</string>
     <string name="selected_page_number" formatted="false">%s of %s</string>
-    <string name="existing_product_in_cart">This product already exist in your cart.</string>
-    <string name="metadata_phone">Phone: %s</string>
-    <string name="metadata_skype">Skype: %s</string>
-    <string name="metadata_facebook">Facebook: %s</string>
+    <string name="existing_product_in_cart">ท่านได้เลือกของชิ้นนี้ไปแล้ว.</string>
+    <string name="metadata_phone">โทรศัพท์: %s</string>
+    <string name="metadata_skype">ยอดเงิน: %s</string>
+
     <string name="fra_cart_saved">Saved:</string>
     <string name="fra_cart_subtotal">Subtotal:</string>
     <string name="fra_cart_vat">VAT(%s%%):</string>
@@ -23,8 +23,8 @@
     <string name="checkout">สั่ง</string>
     <string name="shopping_cart">ตะกร้า</string>
     <string name="clear"></string>
-    <string name="no_result_finded">No products found in this category</string>
-    <string name="no_cart_items">Please add at least one item to your cart</string>
+    <string name="no_result_finded">ไม่มีของที่ท่านต้องการ</string>
+    <string name="no_cart_items">กรุณาเลือกซื้อของอย่างน้อย 1 อย่าง</string>
     <string name="total">TOTAL:</string>
     <string name="fill_info">Google Maps :</string>
     <string name="full_name">Full Name</string>

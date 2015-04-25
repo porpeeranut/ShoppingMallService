@@ -259,12 +259,12 @@ public class MainActivity extends ActionBarActivity implements
 
 		TextView metadatSkype = (TextView) findViewById(R.id.left_drawer_metadata_skype);
 		String skypeString = getString(R.string.metadata_skype);
-		metadatSkype.setText(String.format(skypeString, AppSettings.SKYPE));
+		metadatSkype.setText(String.format(skypeString, AppSettings.MONEY) + String.format(" Baht")); //แก้ Skype เป็นจำนวนเงินซะ
 
-		TextView metadatFacebook = (TextView) findViewById(R.id.left_drawer_metadata_facebook);
+		/*TextView metadatFacebook = (TextView) findViewById(R.id.left_drawer_metadata_facebook);
 		String facebookString = getString(R.string.metadata_facebook);
 		metadatFacebook.setText(String.format(facebookString,
-				AppSettings.FACEBOOK));
+				AppSettings.FACEBOOK));*/
 
 		mMainAdapterData = catalogXmlParser.getCatalog().getMainCategories();
 

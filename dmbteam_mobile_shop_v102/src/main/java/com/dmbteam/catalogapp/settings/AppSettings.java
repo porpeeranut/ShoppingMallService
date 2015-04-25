@@ -41,17 +41,17 @@ public class AppSettings {
 	public static final String clientKey = "NVemF7kKI5euG3d7V166aSUVVerzbp4qJJIuzMgs";
 
 	/** The Constant CATALOG_NAME. */
-	public static final String CATALOG_NAME = "dmb Catalog";
+	public static final String CATALOG_NAME = "กัน บ้องถอบ";
 
 	/** The Constant MAIL. */
-	public static final String MAIL = "support@dmb-tem.com";
+	public static final String MAIL = "gun@bongtrop.com";
 
 	/** The Constant PHONE. */
 	public static final String PHONE = "555-555-33";
 
 	/** The Constant SKYPE. */
-	public static final String SKYPE = "dmb.catalog";
+	public static final int MONEY = 0;
 
 	/** The Constant FACEBOOK. */
-	public static final String FACEBOOK = "facebook.com/catalog";
+	public static final String FACEBOOK = " ";
 }

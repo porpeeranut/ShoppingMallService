@@ -231,12 +231,14 @@ public class CheckoutPreviewAdapter extends
 		 */
 		@Override
 		public void onClick(View v) {
-           /* Toast.makeText(mContext,
-                    mContext.getString(R.string.existing_product_in_cart),
-                    Toast.LENGTH_LONG).show();*/
-            final Context context = v.getContext();
-            final Intent intent = new Intent(context, BaiSed.class);
-            v.getContext().startActivity(intent);
+           Toast.makeText(mContext,"การสั่งของเสร็จสมบูรณ์ กรุณาตรวจสอบใบเสร็จ",Toast.LENGTH_LONG).show();
+
+
+           MainActivity act = new MainActivity();
+            //act.showFragment(false, true, new BaiSed());
+            //final Context context = v.getContext();
+            //final Intent intent = new Intent(context, BaiSed.class);
+            //v.getContext().startActivity(intent);
            //startActivity(new Intent(CheckoutPreviewAdapter.this,BaiSed.class));
 
         }
