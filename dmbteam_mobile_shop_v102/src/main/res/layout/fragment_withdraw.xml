@@ -30,7 +30,6 @@
             android:text="ถอนเงิน"
             android:id="@+id/textView30"
             android:textColor="#ffffffff"
-            android:textStyle="bold"
             android:layout_alignBottom="@+id/bback"
             android:layout_centerHorizontal="true" />
 

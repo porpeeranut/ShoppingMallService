@@ -31,7 +31,6 @@
             android:id="@+id/textView31"
             android:layout_alignBottom="@+id/bback"
             android:layout_centerHorizontal="true"
-            android:textStyle="bold"
             android:textColor="#ffffffff" />
     </RelativeLayout>
 

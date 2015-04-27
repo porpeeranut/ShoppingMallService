@@ -26,22 +26,131 @@
                 android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="จัดการสินค้า"
+                android:id="@+id/textView33"
+                android:layout_alignTop="@+id/bback"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffffff" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/addbtn"
+                android:background="@drawable/btn_cart_plus_pressed"
+                android:layout_alignTop="@+id/bback"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="39dp"
+                android:layout_marginEnd="39dp" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/editbtn"
+                android:background="@drawable/btn_cart_minus_pressed"
+                android:layout_alignTop="@+id/addbtn"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@+id/main_placeholder"
-            android:layout_centerHorizontal="true">
-
-            <TextView
-                android:layout_width="wrap_content"
+            android:background="#ffe1e1e1"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:id="@+id/list_item_container_2"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView23"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/list_item_container_2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_bg"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/list_item_container_2_1_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_nexus5" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/list_item_container_2_1_title"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Nexus 5 32Gb Normaln Edition"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/list_item_container_2_1_discounted_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textSize="@dimen/main_screen_prices_3items" />
+
+                                <TextView
+                                    android:id="@+id/textView23"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="630 B"
+                                    android:textSize="@dimen/main_screen_prices_3items"
+                                    android:textColor="#FF08B200" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
         </RelativeLayout>
     </RelativeLayout>
 
