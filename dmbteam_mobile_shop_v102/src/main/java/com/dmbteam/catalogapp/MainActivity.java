@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
@@ -119,6 +120,11 @@ public class MainActivity extends ActionBarActivity implements
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
 		ThemesManager.setCorrectTheme(this, AppSettings.CURRENT_THEME);
 
 		super.onCreate(savedInstanceState);
@@ -145,7 +151,7 @@ public class MainActivity extends ActionBarActivity implements
 	 * Inits the main components.
 	 */
 	public void initMainComponents() {
-        catalogXmlParser.set_New_Data();
+        catalogXmlParser.set_New_Data(getApplicationContext());
 
 		initLeftSlidingMenu();
 		setUpAdapter();

@@ -8,6 +8,9 @@ import java.util.List;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.simpleframework.xml.core.Persister;
 
 import android.content.Context;
@@ -18,6 +21,8 @@ import com.dmbteam.catalogapp.MainActivity;
 import com.dmbteam.catalogapp.cmn.Catalog;
 import com.dmbteam.catalogapp.cmn.Category;
 import com.dmbteam.catalogapp.cmn.Product;
+import com.dmbteam.catalogapp.lib.Connecter;
+import com.dmbteam.catalogapp.lib.Normal;
 import com.dmbteam.catalogapp.settings.AppSettings;
 
 /**
@@ -190,48 +195,52 @@ public class CatalogXmlParser {
 
 
 
-    public void set_New_Data() {
+    public void set_New_Data(Context context) {
+        String key = Normal.get_key_in_Pref(context);
+        Connecter api = new Connecter(Normal.get_apiURL_in_Pref(context));
+        api.setKey(key);
+        JSONObject objUserData = api.getInitData();
+        JSONObject objStore = api.getStore();
+        JSONObject objCategory = api.getCategory();
+        //Log.e("userDate", objUserData.getString("data"));
+
+        //obj.getString("data");
+
         List<Category> categories = new ArrayList<Category>();
         Category cate;
         cate = new Category(50, true, 0, "หน้าหลัก");
         categories.add(cate);
         //--------------------------------------------------------
         cate = new Category(100, true, 0, "ร้าน");
-        cate.addSubCategoryId(101);
-        cate.addSubCategoryId(102);
-        cate.addSubCategoryId(103);
-        cate.addSubCategoryId(104);
-        categories.add(cate);
+        try {
+            JSONArray jArray = objStore.getJSONArray("data");
+            for (int i = 0;i <  jArray.length();i++) {
+                JSONObject tmp = (JSONObject)jArray.get(i);
+                int cateID = Integer.parseInt(tmp.getString("id"));
+                Category tmpCate = new Category(cateID, false, 100, tmp.getString("fullname"));
+                categories.add(tmpCate);
+                cate.addSubCategoryId(cateID);
 
-        cate = new Category(101, false, 100, "ร้าน1");
-        categories.add(cate);
-
-        cate = new Category(102, false, 100, "ร้าน2");
-        categories.add(cate);
-
-        cate = new Category(103, false, 100, "ร้าน3");
-        categories.add(cate);
-
-        cate = new Category(104, false, 100, "ร้าน4");
+                Log.e("categ", tmp.getString("fullname"));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         categories.add(cate);
         //--------------------------------------------------------
         cate = new Category(200, true, 0, "ประเภท");
-        cate.addSubCategoryId(201);
-        cate.addSubCategoryId(202);
-        cate.addSubCategoryId(203);
-        cate.addSubCategoryId(204);
-        categories.add(cate);
-
-        cate = new Category(201, false, 200, "อาหาร");
-        categories.add(cate);
-
-        cate = new Category(202, false, 200, "เครื่องดื่ม");
-        categories.add(cate);
-
-        cate = new Category(203, false, 200, "เครื่องครัว");
-        categories.add(cate);
-
-        cate = new Category(204, false, 200, "อื่นๆ");
+        try {
+            JSONArray jArray = objCategory.getJSONArray("data");
+            for (int i = 0;i <  jArray.length();i++) {
+                JSONObject tmp = (JSONObject)jArray.get(i);
+                int cateID = Integer.parseInt(tmp.getString("id"));
+                Category tmpCate = new Category(cateID, false, 200, tmp.getString("name"));
+                categories.add(tmpCate);
+                cate.addSubCategoryId(cateID);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         categories.add(cate);
         //--------------------------------------------------------
         cate = new Category(300, true, 0, "ใบเสร็จ");
@@ -257,12 +266,12 @@ public class CatalogXmlParser {
 
         prod = new Product(6, 201, 999, "01.10.2014", "LG G3", "lg_g3");
         prod.setDescription("5.5 Inches, 1440x2560 pixels, 13 MP Camera, 16 GB Storage");
-        prod.setDiscount(10);
+        prod.setDiscount(100);
         products.add(prod);
 
         prod = new Product(7, 101, 1499, "02.10.2014", "Acer S7 13.3", "acer_s7");
         prod.setDescription("The premium Ultrabook from Acer");
-        prod.setDiscount(10);
+        prod.setDiscount(80);
         products.add(prod);
 
         mCatalog.setCategories(categories);
