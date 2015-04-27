@@ -52,4 +52,18 @@
         <item>ออกจากระบบ</item>
     </string-array>
 
+    <string-array name="bank">
+        <item>SCB</item>
+        <item>KTB</item>
+        <item>KBANK</item>
+        <item>TMB</item>
+        <item>NBANK</item>
+        <item>SCIB</item>
+        <item>GSB</item>
+        <item>GHB</item>
+        <item>BBL</item>
+        <item>BBC</item>
+        <item>CITI</item>
+    </string-array>
+
 </resources>

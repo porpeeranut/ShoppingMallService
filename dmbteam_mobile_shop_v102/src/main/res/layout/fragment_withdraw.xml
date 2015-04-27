@@ -22,6 +22,18 @@
             android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ถอนเงิน"
+            android:id="@+id/textView30"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/bback"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -119,8 +131,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spinner"
+            android:entries="@array/bank"
             android:layout_alignTop="@+id/textView29"
             android:layout_marginLeft="100dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ตกลง"
+            android:id="@+id/button"
+            android:layout_marginTop="58dp"
+            android:background="#ff72b83a"
+            android:layout_below="@+id/spinner"
+            android:layout_toRightOf="@+id/textView25"
+            android:layout_toEndOf="@+id/textView25" />
 
     </RelativeLayout>
 
