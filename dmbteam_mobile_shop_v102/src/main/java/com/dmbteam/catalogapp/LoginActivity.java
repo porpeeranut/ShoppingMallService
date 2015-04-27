@@ -1,5 +1,6 @@
 package com.dmbteam.catalogapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -63,5 +64,11 @@ public class LoginActivity extends FragmentActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void toMainActivity() {
+        Intent intent1 = new Intent(this, MainActivity.class);
+        startActivity(intent1);
+        finish();
     }
 }

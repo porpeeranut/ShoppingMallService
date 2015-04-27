@@ -10,28 +10,59 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
+import com.dmbteam.catalogapp.lib.Connecter;
+import com.dmbteam.catalogapp.lib.Normal;
+import com.dmbteam.catalogapp.task.LoginAsyncTask;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link fraglogin.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link fraglogin#newInstance} factory method to
- * create an instance of this fragment.
- */
+import org.json.JSONException;
+
+import java.io.IOException;
+
 public class fraglogin extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    Button skipbutton;
+
+    Button skipbutton, btnLogin;
+    EditText editUsername, editPassword;
+    RadioButton radStore;
     Context context;
+    Activity act;
+    public Connecter api;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_fraglogin, container, false);
-       context = rootView.getContext();
+        context = rootView.getContext();
+        act = getActivity();
 
-        skipbutton=(Button)rootView.findViewById(R.id.skipbtn);
+        editUsername = (EditText)rootView.findViewById(R.id.editUsername);
+        editPassword = (EditText)rootView.findViewById(R.id.editPassword);
+        radStore = (RadioButton)rootView.findViewById(R.id.radStore);
+        btnLogin = (Button)rootView.findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String user = editUsername.getText().toString();
+                String pass = editPassword.getText().toString();
+                if (Normal.isInternetConnected(getActivity())) {
+                    if (user.length() != 0 && pass.length() != 0) {
+                        String url;
+                        if (radStore.isChecked())
+                            url = "http://vps.bongtrop.com/shoppingmall/index.php/store";
+                        else
+                            url = "http://vps.bongtrop.com/shoppingmall/index.php/consumer";
+                        Normal.set_apiURL_in_Pref(context, url);
+                        new LoginAsyncTask((LoginActivity)act, url, user ,pass).execute();
+                    }
+                } else
+                    Toast.makeText(context, "Internet not connect.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        skipbutton = (Button)rootView.findViewById(R.id.skipbtn);
         skipbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

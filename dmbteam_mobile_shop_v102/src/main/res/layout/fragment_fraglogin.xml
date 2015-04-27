@@ -17,7 +17,7 @@
             android:layout_marginTop="20dp"
             android:inputType="textVisiblePassword|textNoSuggestions"
             android:hint="Username"
-            android:id="@+id/editText" />
+            android:id="@+id/editUsername" />
 
         <EditText
             android:layout_width="320dp"
@@ -26,7 +26,7 @@
             android:inputType="textPassword"
             android:ems="10"
             android:hint="Password"
-            android:id="@+id/editText2" />
+            android:id="@+id/editPassword" />
 
         <RadioGroup
             android:layout_width="fill_parent"
@@ -34,17 +34,18 @@
             android:layout_marginTop="5dp">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radStore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="50dp"
                 android:text="ร้านค้า"
                 android:layout_below="@+id/jdtchoose"
-                android:layout_alignLeft="@+id/jdtchoose" />
+                android:layout_alignLeft="@+id/jdtchoose"
+                android:checked="true" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ผู้ใช้ทั่วไป"
@@ -58,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LOGIN"
-            android:id="@+id/button"
+            android:id="@+id/btnLogin"
             android:layout_gravity="center_horizontal" />
 
         <Button

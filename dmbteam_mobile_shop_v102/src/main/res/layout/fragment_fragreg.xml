@@ -24,17 +24,18 @@
                 android:textColor="#ff000000" />
 
             <RadioButton
-                android:id="@+id/radioButton1"
+                android:id="@+id/radStore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="50dp"
                 android:text="ร้านค้า"
                 android:layout_below="@+id/jdtchoose"
-                android:layout_alignLeft="@+id/jdtchoose" />
+                android:layout_alignLeft="@+id/jdtchoose"
+                android:checked="true" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ผู้ใช้ทั่วไป"
@@ -48,55 +49,72 @@
             </RadioGroup>
 
         <EditText
+            android:id="@+id/editFullname"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText6"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="19dp"
             android:hint="Name"/>
 
         <EditText
+            android:id="@+id/editEmail"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText4"
             android:layout_marginLeft="19dp"
             android:hint="E-mail" />
 
         <EditText
+            android:id="@+id/editPhone"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editText5"
             android:layout_marginLeft="19dp"
             android:hint="Phone Number" />
 
         <EditText
+            android:id="@+id/editAddress"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="19dp"
             android:inputType="textVisiblePassword|textNoSuggestions"
-            android:hint="Username"
-            android:id="@+id/editText" />
+            android:hint="Address" />
 
         <EditText
+            android:id="@+id/editUser"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:inputType="textVisiblePassword|textNoSuggestions"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/editPass"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="19dp"
             android:inputType="textPassword"
             android:ems="10"
-            android:hint="Password"
-            android:id="@+id/editText2" />
+            android:hint="Password" />
+
+        <EditText
+            android:id="@+id/editConfPass"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="Confirm Password" />
 
         <Button
+            android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SUBMIT"
-            android:id="@+id/button"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>

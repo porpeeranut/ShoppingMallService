@@ -1,0 +1,46 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    .gitignore
+	modified:   dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/LoginActivity.java
+	modified:   dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/MainActivity.java
+	modified:   dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/fraglogin.java
+	modified:   dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/fragreg.java
+	modified:   dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/xmlparse/CatalogXmlParser.java
+	modified:   dmbteam_mobile_shop_v102/src/main/res/layout/fragment_fraglogin.xml
+	modified:   dmbteam_mobile_shop_v102/src/main/res/layout/fragment_fragreg.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gradle/
+	.idea/
+	ShoppingMallService.iml
+	build.gradle
+	build/
+	catalogViewPagerIndicator/build.gradle
+	catalogViewPagerIndicator/build/
+	catalogViewPagerIndicator/catalogViewPagerIndicator.iml
+	dmbteam_mobile_shop_v102/build.gradle
+	dmbteam_mobile_shop_v102/build/
+	dmbteam_mobile_shop_v102/dmbteam_mobile_shop_v102.iml
+	dmbteam_mobile_shop_v102/libs/
+	dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/lib/
+	dmbteam_mobile_shop_v102/src/main/java/com/dmbteam/catalogapp/task/
+	floatingActionButton/build.gradle
+	floatingActionButton/build/
+	floatingActionButton/floatingActionButton.iml
+	floatingActionButton/libs/
+	gradle/
+	gradlew
+	gradlew.bat
+	import-summary.txt
+	local.properties
+	settings.gradle
+	status.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
