@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,29 +53,45 @@ public class ShopMainFragment extends Fragment {
                     case 0:
                         ShopItemSettingFragment oneFragment = new ShopItemSettingFragment();
                         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        Vibrator vibe = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE) ;
+                        vibe.vibrate(10);
                         transaction.replace(R.id.fragment_shop, oneFragment);
-                        getFragmentManager().popBackStack();
                         transaction.commit();
 
 
-                        Vibrator vibe = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE) ;
-                        vibe.vibrate(100);
+
                         break;
                     case 1:
+                        OfferListFragment offer = new OfferListFragment();
+                        FragmentTransaction transaction2 = getFragmentManager().beginTransaction();
                         Vibrator vibe2 = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE) ;
-                        vibe2.vibrate(50);
+                        vibe2.vibrate(10);
+                        transaction2.replace(R.id.fragment_shop, offer);
+                        transaction2.commit();
                         break;
                     case 2:
+                        PromoShopListFragment promo = new PromoShopListFragment();
+                        FragmentTransaction transaction3 = getFragmentManager().beginTransaction();
                         Vibrator vibe3 = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE) ;
                         vibe3.vibrate(10);
+                        transaction3.replace(R.id.fragment_shop, promo);
+                        transaction3.commit();
                         break;
                     case 3:
+                        WithdrawFragment withdraw = new WithdrawFragment();
+                        FragmentTransaction transaction4 = getFragmentManager().beginTransaction();
                         Vibrator vibe4 = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE) ;
                         vibe4.vibrate(10);
+                        transaction4.replace(R.id.fragment_shop, withdraw);
+                        transaction4.commit();
                         break;
                     case 4:
+                        ShopSittingFragment sitting = new ShopSittingFragment();
+                        FragmentTransaction transaction5 = getFragmentManager().beginTransaction();
                         Vibrator vibe5 = (Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE) ;
                         vibe5.vibrate(10);
+                        transaction5.replace(R.id.fragment_shop, sitting);
+                        transaction5.commit();
                         break;
                     case 5:
                         final Intent intent = new Intent(getActivity().getApplicationContext(), LoginActivity.class);

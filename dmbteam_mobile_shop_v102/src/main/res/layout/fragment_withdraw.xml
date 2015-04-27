@@ -1,0 +1,127 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dmbteam.catalogapp.fragment.WithdrawFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="#ff72b83a">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/bback"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ยอดเงินคงเหลือ"
+            android:id="@+id/textView24"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="66dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="ถอนจำนวน"
+            android:id="@+id/textView25"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/textView24"
+            android:layout_alignLeft="@+id/textView24"
+            android:layout_alignStart="@+id/textView24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="B"
+            android:id="@+id/textView26"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="17dp"
+            android:layout_marginEnd="17dp"
+            android:layout_alignTop="@+id/textView25"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="B"
+            android:id="@+id/textView27"
+            android:layout_gravity="left|top"
+            android:layout_above="@+id/textView25"
+            android:layout_alignLeft="@+id/textView26"
+            android:layout_alignStart="@+id/textView26" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_alignBottom="@+id/textView25"
+            android:layout_toRightOf="@+id/textView25"
+            android:layout_toEndOf="@+id/textView25"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/textView28"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_above="@+id/textView25"
+            android:layout_toRightOf="@+id/textView24"
+            android:layout_toEndOf="@+id/textView24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="บัญชี"
+            android:id="@+id/textView29"
+            android:layout_gravity="left|top"
+            android:layout_below="@+id/textView25"
+            android:layout_alignLeft="@+id/textView25"
+            android:layout_alignStart="@+id/textView25"
+            android:layout_marginTop="41dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_alignTop="@+id/textView29"
+            android:layout_marginLeft="100dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

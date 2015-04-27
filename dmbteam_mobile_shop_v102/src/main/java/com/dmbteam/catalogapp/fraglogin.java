@@ -10,13 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-<<<<<<< HEAD
 import android.widget.RadioButton;
-=======
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
->>>>>>> origin/master
 
 import com.dmbteam.catalogapp.lib.Connecter;
 import com.dmbteam.catalogapp.lib.Normal;
@@ -39,12 +36,10 @@ public class fraglogin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_fraglogin, container, false);
-<<<<<<< HEAD
        context = rootView.getContext();
-        final RadioButton userrdo = (RadioButton)rootView.findViewById(R.id.aaa);
-        final RadioButton shoprdo = (RadioButton)rootView.findViewById(R.id.bbb);
+        final RadioButton userrdo = (RadioButton)rootView.findViewById(R.id.radUser);
+        final RadioButton shoprdo = (RadioButton)rootView.findViewById(R.id.radStore);
         skipbutton=(Button)rootView.findViewById(R.id.skipbtn);
-=======
         context = rootView.getContext();
         act = getActivity();
 
@@ -73,7 +68,6 @@ public class fraglogin extends Fragment {
         });
 
         skipbutton = (Button)rootView.findViewById(R.id.skipbtn);
->>>>>>> origin/master
         skipbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

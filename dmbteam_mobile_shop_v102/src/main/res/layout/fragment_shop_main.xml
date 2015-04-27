@@ -8,7 +8,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/main_placeholder"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:orientation="vertical"
         android:background="#ff72b83a">
 
@@ -21,7 +21,7 @@
             android:id="@+id/textView22"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="35dp"
             android:textColor="#ffffffff"
             android:textStyle="bold" />
 
@@ -32,7 +32,8 @@
             android:background="#ffffffff"
             android:layout_gravity="center_horizontal|top"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -47,7 +48,7 @@
             android:entries="@array/shopmenu"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="156dp" />
+            android:layout_marginTop="200dp" />
     </RelativeLayout>
 
 </FrameLayout>

@@ -1,9 +1,13 @@
 package com.dmbteam.catalogapp;
 
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.dmbteam.catalogapp.fragment.ShopItemSettingFragment;
+import com.dmbteam.catalogapp.fragment.ShopMainFragment;
 
 
 public class ShopMainActivity extends ActionBarActivity {
@@ -12,6 +16,10 @@ public class ShopMainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_main);
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        ShopMainFragment oneFragment = new ShopMainFragment();
+        transaction.replace(R.id.fragment_shop, oneFragment);
+        transaction.commit();
     }
 
 
