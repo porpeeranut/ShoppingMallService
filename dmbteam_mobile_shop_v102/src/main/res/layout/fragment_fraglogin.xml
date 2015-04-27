@@ -34,20 +34,20 @@
             android:layout_marginTop="5dp">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/aaa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="50dp"
-                android:text="ร้านค้า"
+                android:text="ผู้ใช้ทั่วไป"
                 android:layout_below="@+id/jdtchoose"
                 android:layout_alignLeft="@+id/jdtchoose" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/bbb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ผู้ใช้ทั่วไป"
+                android:text="ร้านค้า"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="0dp"
                 android:layout_below="@+id/radioButton"
