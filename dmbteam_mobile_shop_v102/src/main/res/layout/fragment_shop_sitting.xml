@@ -47,9 +47,9 @@
             android:text="บันทึก"
             android:id="@+id/button3"
             android:background="#ff72b83a"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="159dp" />
+            android:layout_marginTop="34dp"
+            android:layout_below="@+id/editText10"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -111,10 +111,10 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="รหัสผ่าน"
             android:id="@+id/textView21"
-            android:layout_above="@+id/button3"
+            android:layout_marginTop="37dp"
+            android:layout_below="@+id/textView20"
             android:layout_alignLeft="@+id/textView20"
-            android:layout_alignStart="@+id/textView20"
-            android:layout_marginBottom="22dp" />
+            android:layout_alignStart="@+id/textView20" />
 
         <EditText
             android:layout_width="wrap_content"

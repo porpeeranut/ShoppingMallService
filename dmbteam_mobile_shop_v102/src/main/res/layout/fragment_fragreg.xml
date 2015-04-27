@@ -24,17 +24,6 @@
                 android:textColor="#ff000000" />
 
             <RadioButton
-                android:id="@+id/radStore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="50dp"
-                android:text="ร้านค้า"
-                android:layout_below="@+id/jdtchoose"
-                android:layout_alignLeft="@+id/jdtchoose"
-                android:checked="true" />
-
-            <RadioButton
                 android:id="@+id/radUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,10 +32,21 @@
                 android:layout_marginTop="0dp"
                 android:layout_below="@+id/radioButton1"
                 android:layout_alignLeft="@+id/radioButton1"
-                />
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="50dp"
+                android:text="ร้านค้า"
+                android:layout_below="@+id/jdtchoose"
+                android:layout_alignLeft="@+id/jdtchoose"
+                android:checked="false" />
 
 
-            </RadioGroup>
+        </RadioGroup>
 
         <EditText
             android:id="@+id/editFullname"
