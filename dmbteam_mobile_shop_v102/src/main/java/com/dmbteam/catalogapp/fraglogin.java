@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -35,6 +36,10 @@ public class fraglogin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_fraglogin, container, false);
+       context = rootView.getContext();
+        final RadioButton userrdo = (RadioButton)rootView.findViewById(R.id.radUser);
+        final RadioButton shoprdo = (RadioButton)rootView.findViewById(R.id.radStore);
+        skipbutton=(Button)rootView.findViewById(R.id.skipbtn);
         context = rootView.getContext();
         act = getActivity();
 
@@ -68,9 +73,20 @@ public class fraglogin extends Fragment {
         skipbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(context, MainActivity.class);
-                startActivity(intent1);
-                getActivity().finish();
+                if(userrdo.isChecked()){
+                    Intent intent1 = new Intent(context, MainActivity.class);
+                    startActivity(intent1);
+                    getActivity().finish();
+                }
+                else
+                {
+                    if(shoprdo.isChecked())
+                    {
+                        Intent intent2 = new Intent(context, ShopMainActivity.class);
+                        startActivity(intent2);
+                        getActivity().finish();
+                    }
+                }
             }
         });
         return rootView;

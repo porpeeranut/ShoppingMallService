@@ -14,7 +14,6 @@
     <string name="existing_product_in_cart">ท่านได้เลือกของชิ้นนี้ไปแล้ว.</string>
     <string name="metadata_phone">โทรศัพท์: %s</string>
     <string name="metadata_skype">ยอดเงิน: %s</string>
-
     <string name="fra_cart_saved">Saved:</string>
     <string name="fra_cart_subtotal">Subtotal:</string>
     <string name="fra_cart_vat">VAT(%s%%):</string>
@@ -42,5 +41,15 @@
     <string name="title_activity_bai_sed">BaiSed</string>
     <string name="title_activity_topup">topup</string>
     <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_shop_main">ShopMainActivity</string>
+
+    <string-array name="shopmenu">
+        <item>จัดการสินค้า</item>
+        <item>รายการสั่งซื้อ</item>
+        <item>จัดการโปรโมชั่น</item>
+        <item>ถอนเงิน</item>
+        <item>ตั้งค่า</item>
+        <item>ออกจากระบบ</item>
+    </string-array>
 
 </resources>
