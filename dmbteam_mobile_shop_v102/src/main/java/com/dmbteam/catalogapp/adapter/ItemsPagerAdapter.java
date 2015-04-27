@@ -30,6 +30,7 @@ import com.dmbteam.catalogapp.arcanimator.ArcAnimator;
 import com.dmbteam.catalogapp.arcanimator.Side;
 import com.dmbteam.catalogapp.cart.CartManager;
 import com.dmbteam.catalogapp.cmn.Product;
+import com.dmbteam.catalogapp.lib.Normal;
 import com.dmbteam.catalogapp.settings.AppSettings;
 import com.dmbteam.catalogapp.util.ImageOptionsBuilder;
 import com.dmbteam.catalogapp.util.Utils;
@@ -128,8 +129,8 @@ public class ItemsPagerAdapter extends PagerAdapter implements IconPagerAdapter 
 			mImageLoader.displayImage(currentProduct.getPhoto(mContext),
 					mainImageView, mDisplayImageOptions);
 		} else {
-			mainImageView.setImageDrawable(mContext.getResources().getDrawable(
-					currentProduct.getDrawableId(mContext)));
+			//mainImageView.setImageDrawable(mContext.getResources().getDrawable(currentProduct.getDrawableId(mContext)));
+            mainImageView.setImageBitmap(Normal.loadImage(mContext, currentProduct.getPhoto(mContext)));
 		}
 
 		TextView categoryView = (TextView) mainLayout
@@ -195,13 +196,17 @@ public class ItemsPagerAdapter extends PagerAdapter implements IconPagerAdapter 
 
 		titlePagerItem.setText(currentProduct.getTitle());
 
-		TextView color = (TextView) mainLayout
+		/*TextView color = (TextView) mainLayout
 				.findViewById(R.id.pager_item_product_color_value);
-		color.setText(currentProduct.getColor());
+		color.setText(currentProduct.getColor());*/
 
-		TextView condition = (TextView) mainLayout
+		/*TextView condition = (TextView) mainLayout
 				.findViewById(R.id.pager_item_product_condition_value);
-		condition.setText(currentProduct.getCondition());
+		condition.setText(currentProduct.getCondition());*/
+
+        TextView no_value = (TextView) mainLayout
+                .findViewById(R.id.pager_item_product_no_value);
+        no_value.setText(currentProduct.getNoValue());
 
 		TextView descriptionTextView = (TextView) mainLayout
 				.findViewById(R.id.pager_item_product_description);

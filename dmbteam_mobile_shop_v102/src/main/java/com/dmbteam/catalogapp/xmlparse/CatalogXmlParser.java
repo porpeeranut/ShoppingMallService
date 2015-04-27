@@ -1,7 +1,11 @@
 package com.dmbteam.catalogapp.xmlparse;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +18,8 @@ import org.json.JSONObject;
 import org.simpleframework.xml.core.Persister;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -197,17 +203,19 @@ public class CatalogXmlParser {
 
     public void set_New_Data(Context context) {
         String key = Normal.get_key_in_Pref(context);
+        String main_pic_url = Normal.get_PictureURL_in_Pref(context);
         Connecter api = new Connecter(Normal.get_apiURL_in_Pref(context));
         api.setKey(key);
         JSONObject objUserData = api.getInitData();
         JSONObject objStore = api.getStore();
         JSONObject objCategory = api.getCategory();
-        //Log.e("userDate", objUserData.getString("data"));
-
-        //obj.getString("data");
-
         List<Category> categories = new ArrayList<Category>();
+        List<Product> products = new ArrayList<Product>();
+        List<Product> sliders = new ArrayList<Product>();
+        int sliderCount = 0;
         Category cate;
+        Product prod;
+
         cate = new Category(50, true, 0, "หน้าหลัก");
         categories.add(cate);
         //--------------------------------------------------------
@@ -216,12 +224,45 @@ public class CatalogXmlParser {
             JSONArray jArray = objStore.getJSONArray("data");
             for (int i = 0;i <  jArray.length();i++) {
                 JSONObject tmp = (JSONObject)jArray.get(i);
-                int cateID = Integer.parseInt(tmp.getString("id"));
-                Category tmpCate = new Category(cateID, false, 100, tmp.getString("fullname"));
+                int storeID = Integer.parseInt(tmp.getString("id"));
+                Category tmpCate = new Category(storeID, false, 100, tmp.getString("fullname"));
                 categories.add(tmpCate);
-                cate.addSubCategoryId(cateID);
+                cate.addSubCategoryId(storeID);
 
-                Log.e("categ", tmp.getString("fullname"));
+                //  get product in store
+                JSONObject objProduct = api.getProductInStore(storeID+"");
+                JSONArray proArray = objProduct.getJSONArray("data");
+                for (int j = 0;j <  proArray.length();j++) {
+                    JSONObject tmpProd = (JSONObject)proArray.get(j);
+                    int prodID = Integer.parseInt(tmpProd.getString("id"));
+                    int price = Integer.parseInt(tmpProd.getString("price"));
+                    String picFilename = tmpProd.getString("image");
+                    String no = tmpProd.getString("no");
+                    prod = new Product(prodID, storeID, price, "30.10.2014", tmpProd.getString("name"), picFilename, no);
+                    prod.setDescription(tmpProd.getString("detail"));
+                    //prod.setDiscount(20);
+                    if (sliderCount < 5) {
+                        sliders.add(prod);
+                        sliderCount++;
+                    } else
+                        products.add(prod);
+                    loadImageAndSave(context, main_pic_url, picFilename);
+                }
+
+                /*int id,
+                int category,
+                double price,
+                String date,
+                String title,
+                String photo
+
+                "id":"1",
+                        "name":"noom",
+                        "detail":"bood",
+                        "price":"200",
+                        "no":"1",
+                        "store_id":"1",*/
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -233,10 +274,30 @@ public class CatalogXmlParser {
             JSONArray jArray = objCategory.getJSONArray("data");
             for (int i = 0;i <  jArray.length();i++) {
                 JSONObject tmp = (JSONObject)jArray.get(i);
-                int cateID = Integer.parseInt(tmp.getString("id"));
+                int cateID = 2000+Integer.parseInt(tmp.getString("id"));
                 Category tmpCate = new Category(cateID, false, 200, tmp.getString("name"));
                 categories.add(tmpCate);
                 cate.addSubCategoryId(cateID);
+
+                //  get product in category
+                JSONObject objProduct = api.getProductInCategory((cateID - 2000) + "");
+                JSONArray proArray = objProduct.getJSONArray("data");
+                for (int j = 0;j <  proArray.length();j++) {
+                    JSONObject tmpProd = (JSONObject)proArray.get(j);
+                    int prodID = 2000+Integer.parseInt(tmpProd.getString("id"));
+                    int price = Integer.parseInt(tmpProd.getString("price"));
+                    String picFilename = tmpProd.getString("image");
+                    String no = tmpProd.getString("no");
+                    prod = new Product(prodID, cateID, price, "30.10.2014", tmpProd.getString("name"), picFilename, no);
+                    prod.setDescription(tmpProd.getString("detail"));
+                    //prod.setDiscount(20);
+                    if (sliderCount < 5) {
+                        sliders.add(prod);
+                        sliderCount++;
+                    } else
+                        products.add(prod);
+                    loadImageAndSave(context, main_pic_url, picFilename);
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -256,10 +317,9 @@ public class CatalogXmlParser {
         categories.add(cate);
         //--------------------------------------------------------
 
-        List<Product> products = new ArrayList<Product>();
-        Product prod;
+
         //  int id, int category, double price, String date, String title, String photo, String description
-        prod = new Product(1, 101, 1000, "30.10.2014", "Nexus 9", "home_nexus9");
+        /*prod = new Product(1, 101, 1000, "30.10.2014", "Nexus 9", "home_nexus9");
         prod.setDescription("8.9 IPS LCD, Android 5.0, NVIDIA Tegra K1 processor 2.3 GHz, 32 Gb");
         prod.setDiscount(20);
         products.add(prod);
@@ -272,15 +332,33 @@ public class CatalogXmlParser {
         prod = new Product(7, 101, 1499, "02.10.2014", "Acer S7 13.3", "acer_s7");
         prod.setDescription("The premium Ultrabook from Acer");
         prod.setDiscount(80);
-        products.add(prod);
+        products.add(prod);*/
 
         mCatalog.setCategories(categories);
+        mCatalog.setSliders(sliders);
         mCatalog.setProducts(products);
         mCatalog.initCategoriesForAdapter();
     }
 
+    private void loadImageAndSave(Context context, String main_pic_url, String picFilename) {
+        File chk = new File(picFilename);
+        if(!chk.exists()) {
+            String pic_url = main_pic_url + "/" + picFilename;
+            URL imageurl = null;
+            try {
+                imageurl = new URL(pic_url);
+                Bitmap bitmap = BitmapFactory.decodeStream(imageurl.openConnection().getInputStream());
+                Normal.saveImage_Bitmap(context, picFilename, bitmap);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
-	/**
+
+    /**
 	 * The Class CatalogXmlNetworkStremReader.
 	 */
 	private class CatalogXmlNetworkStremReader extends

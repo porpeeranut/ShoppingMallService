@@ -157,12 +157,10 @@ catalogViewPagerIndicator\build.gradle
 catalogViewPagerIndicator\catalogViewPagerIndicator.iml
 
 dmbteam_mobile_shop_v102\build\
-dmbteam_mobile_shop_v102\libs\
 dmbteam_mobile_shop_v102\build.gradle
 dmbteam_mobile_shop_v102\dmbteam_mobile_shop_v102.iml
 
 floatingActionButton\build\
-floatingActionButton\libs\
 floatingActionButton\build.gradle
 floatingActionButton\floatingActionButton.iml
 

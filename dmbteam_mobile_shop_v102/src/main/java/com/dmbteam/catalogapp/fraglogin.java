@@ -54,7 +54,9 @@ public class fraglogin extends Fragment {
                             url = "http://vps.bongtrop.com/shoppingmall/index.php/store";
                         else
                             url = "http://vps.bongtrop.com/shoppingmall/index.php/consumer";
+                        String picURL = "http://vps.bongtrop.com/shoppingmall/images";
                         Normal.set_apiURL_in_Pref(context, url);
+                        Normal.set_PictureURL_in_Pref(context, picURL);
                         new LoginAsyncTask((LoginActivity)act, url, user ,pass).execute();
                     }
                 } else

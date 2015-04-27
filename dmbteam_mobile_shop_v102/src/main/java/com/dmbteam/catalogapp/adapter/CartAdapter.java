@@ -17,6 +17,7 @@ import com.dmbteam.catalogapp.cart.CartItem;
 import com.dmbteam.catalogapp.cart.CartManager;
 import com.dmbteam.catalogapp.cmn.Product;
 import com.dmbteam.catalogapp.fragment.FragmentCart;
+import com.dmbteam.catalogapp.lib.Normal;
 import com.dmbteam.catalogapp.settings.AppSettings;
 import com.dmbteam.catalogapp.util.ImageOptionsBuilder;
 import com.dmbteam.catalogapp.util.Utils;
@@ -145,8 +146,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 					currentProduct.getPhoto(mContext), holder.imageViewPicture,
 					mDisplayImageOptions);
 		} else {
-			holder.imageViewPicture.setImageDrawable(mContext.getResources()
-					.getDrawable(currentProduct.getDrawableId(mContext)));
+			//holder.imageViewPicture.setImageDrawable(mContext.getResources().getDrawable(currentProduct.getDrawableId(mContext)));
+            holder.imageViewPicture.setImageBitmap(Normal.loadImage(mContext, currentProduct.getPhoto(mContext)));
 		}
 
 		holder.title.setText(currentProduct.getTitle());

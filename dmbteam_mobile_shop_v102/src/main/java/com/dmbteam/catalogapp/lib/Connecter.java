@@ -195,6 +195,20 @@ public class Connecter {
         return get(this.url+"/getstore/"+this.key);
     }
 
+    public JSONObject getProductInCategory(String cateID) {
+        /*  s(offset)
+            l(limit)
+            id(category)    */
+        return get(this.url+"/getproduct?type=category&s=0&l=50&id="+cateID);
+    }
+
+    public JSONObject getProductInStore(String storeID) {
+        /*  s(offset)
+            l(limit)
+            id(store)    */
+        return get(this.url+"/getproduct?type=store&s=0&l=50&id="+storeID);
+    }
+
     public boolean editTeacherPassword(String oldpass, String newpass) throws JSONException {
         List<NameValuePair> parameter = new ArrayList<NameValuePair>();
         parameter.add(new BasicNameValuePair("oldpass", oldpass));

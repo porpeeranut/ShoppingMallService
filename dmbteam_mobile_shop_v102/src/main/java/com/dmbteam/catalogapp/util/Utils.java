@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.dmbteam.catalogapp.R;
 import com.dmbteam.catalogapp.adapter.MainProductAdapter;
 import com.dmbteam.catalogapp.cmn.Product;
+import com.dmbteam.catalogapp.lib.Normal;
 import com.dmbteam.catalogapp.settings.AppSettings;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -75,8 +76,8 @@ public class Utils {
 					currentProduct.getPhoto(mContext), mainImageView,
 					mDisplayImageOptions);
 		} else {
-			mainImageView.setImageDrawable(mContext.getResources().getDrawable(
-					currentProduct.getDrawableId(mContext)));
+			//mainImageView.setImageDrawable(mContext.getResources().getDrawable(currentProduct.getDrawableId(mContext)));
+            mainImageView.setImageBitmap(Normal.loadImage(mContext, currentProduct.getPhoto(mContext)));
 		}
 
 		String discountedPrice = "";

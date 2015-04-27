@@ -50,18 +50,21 @@ public class Product implements Comparable<Product> {
 	@Element(required = true)
 	private String color;
 
+    private String noValue;
+
 	/** The discounted price. */
 	private double discountedPrice;
 
     public Product(){}
 
-    public Product(int id, int category, double price, String date, String title, String photo) {
+    public Product(int id, int category, double price, String date, String title, String photo, String noValue) {
         this.id = id;
         this.category = category;
         this.price = price;
         this.date = date;
         this.title = title;
         this.photo = photo;
+        this.noValue = noValue;
     }
 
     public void setDescription(String description) {
@@ -194,6 +197,10 @@ public class Product implements Comparable<Product> {
 	public String getColor() {
 		return color;
 	}
+
+    public String getNoValue() {
+        return noValue;
+    }
 
 	/**
 	 * Gets the discounted price.

@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.dmbteam.catalogapp.MainActivity;
 import com.dmbteam.catalogapp.R;
 import com.dmbteam.catalogapp.cmn.Product;
+import com.dmbteam.catalogapp.lib.Normal;
 import com.dmbteam.catalogapp.listener.MainItemListener;
 import com.dmbteam.catalogapp.util.ImageOptionsBuilder;
 import com.dmbteam.catalogapp.util.ThemeManager;
@@ -110,8 +111,8 @@ public class MainPagerAdapter extends PagerAdapter implements IconPagerAdapter {
 			mImageLoader.displayImage(currentProduct.getPhoto(mContext),
 					mainImageView, mDisplayImageOptions);
 		} else {
-			mainImageView.setImageDrawable(mContext.getResources().getDrawable(
-					currentProduct.getDrawableId(mContext)));
+			//mainImageView.setImageDrawable(mContext.getResources().getDrawable(currentProduct.getDrawableId(mContext)));
+            mainImageView.setImageBitmap(Normal.loadImage(mContext, currentProduct.getPhoto(mContext)));
 		}
 
 		TextView mainViewTitle = (TextView) mainLayout
